@@ -2,18 +2,63 @@
 
 <html>
   <head>
-    <title>JRMT BSCS2A | VR Countdown</title>
+    <title>JRMT BSCS2A | Pixelated Computer</title>
     <meta   charset = "utf-8">
     <meta   name = "Author" content = "Jasper Ryan M. tayo | BSCS2A">
-    <meta   name = "Description" content = "A Gaming Set-Up created for Final Examination">
-    <script src = "https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <meta   name = "Subject" content = "Application Development and Emerging Technologies">
+    <meta   name = "Description" content = "A Pixelated Gaming Set-Up created for Final Examination">
+    <script src = "https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
 
   <body>
     <a-scene>
-      <a-entity camera position = "0 2 5" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
-      
+      <a-assets>
+        <a-mixin
+          id = "keyCap"
+          material = "color: #101010; shader: standard; roughness: 2"
+          position = "0 0 0"
+          geometry = "primitive: box; height: 0.5; width: 1; depth: 1">
+        </a-mixin>
+        <a-mixin
+          id = "keyLet"
+          position = "0 0.25 0"
+          rotation = "-90 0 0"
+          text = "align: center; width: 10; color: white">
+        </a-mixin>
+        <a-mixin
+          id = "keyLight"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          light = "type: point; color: random;intensity: 25; distance: 1.5">
+        </a-mixin>
+      </a-assets>
+
+      <!-- Board -->
+      <a-entity
+        geometry = "primitive: plane; depth: 0.1; height: 15; width: 30"
+        position = "0 0.25 0"
+        rotation = "-90 0 0"
+        material = "shader: standard; color: black; roughness: 0.75">
+      </a-entity>
+
+      <!-- Keyboard Keys -->
+      <a-entity mixin = "keyCap" position = "0 1 0">
+        <a-entity mixin = "keyLet" text = "value: K"></a-entity>
+        <a-entity mixin = "keyLight"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-1.25 1 0">
+        <a-entity mixin = "keyLet" text = "value: J"></a-entity>
+        <a-entity mixin = "keyLight"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-2.5 1 0">
+        <a-entity mixin = "keyLet" text = "value: H"></a-entity>
+        <a-entity mixin = "keyLight"></a-entity>
+      </a-entity>
     
+
+      <a-entity light = "type: point; color: #fff; intensity: 5; distance: 100" position = "20 75 20"></a-entity>
+      <a-entity camera position = "0 0 2" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
+      <a-sky material = "color: #fff"></a-sky>
     </a-scene>
   </body>
 </html>
