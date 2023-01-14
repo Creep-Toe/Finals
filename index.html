@@ -26,11 +26,55 @@
           text = "align: center; width: 10; color: white">
         </a-mixin>
         <a-mixin
-          id = "keyLight"
+          id = "keyLight-1"
           position = "0 -0.4 0"
           geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
-          light = "type: point; color: random;intensity: 25; distance: 1.5">
+          material = "color: white; shader: flat"
+          light = "type: point; color: red; intensity: 25; distance: 1.5">
         </a-mixin>
+        <a-mixin
+          id = "keyLight-2"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          material = "color: white; shader: flat"
+          light = "type: point; color: orange; intensity: 25; distance: 1.5">
+        </a-mixin>
+        <a-mixin
+          id = "keyLight-3"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          material = "color: white; shader: flat"
+          light = "type: point; color: yellow; intensity: 25; distance: 1.5">
+        </a-mixin>
+        <a-mixin
+          id = "keyLight-4"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          material = "color: white; shader: flat"
+          light = "type: point; color: blue; intensity: 25; distance: 1.5">
+        </a-mixin>
+        <a-mixin
+          id = "keyLight-5"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          material = "color: white; shader: flat"
+          light = "type: point; color: green; intensity: 25; distance: 1.5">
+        </a-mixin>
+        <a-mixin
+          id = "keyLight-6"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          material = "color: white; shader: flat"
+          light = "type: point; color: violet; intensity: 25; distance: 1.5">
+        </a-mixin>
+        <a-mixin
+          id = "keyLight-7"
+          position = "0 -0.4 0"
+          geometry = "primitive: box; height: 0.25; width: 0.25; depth: 0.25"
+          material = "color: white; shader: flat"
+          light = "type: point; color: pink; intensity: 25; distance: 1.5">
+        </a-mixin>
+
       </a-assets>
 
       <!-- Board -->
@@ -41,23 +85,283 @@
         material = "shader: standard; color: black; roughness: 0.75">
       </a-entity>
 
-      <!-- Keyboard Keys -->
+      <!-- Keyboard Keys 1st Row -->
+      <a-entity mixin = "keyCap" position = "-10.75 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: ESC"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-8.7 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F1"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-7.45 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F2"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-6.2 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F3"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-4.95 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F4"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-3.1 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F5"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-1.85 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F6"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-.6 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F7"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = ".65 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F8"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "2.5 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F9"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "3.75 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F10"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "5 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F11"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "6.25 1 -4.25">
+        <a-entity mixin = "keyLet" text = "value: F12"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+
+      <!-- Keyboard Keys 2nd Row -->
+      <a-entity mixin = "keyCap" position = "5.9 1 -2.5" geometry = "width: 1.75">
+        <a-entity mixin = "keyLet" text = "value: <---"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "4.25 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: +"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "3 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: -"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "1.75 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 0"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = ".5 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 9"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-.75 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 8"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-2 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 7"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-3.25 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 6"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-4.5 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 5"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-5.75 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 4"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-7 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 3"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-8.25 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 2"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-9.5 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: 1"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-10.75 1 -2.5">
+        <a-entity mixin = "keyLet" text = "value: `"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+
+      <!-- Keyboard Keys 3rd Row -->
+      <a-entity mixin = "keyCap" position = "6.15 1 -1.25" geometry = "width: 1.25">
+        <a-entity mixin = "keyLet" text = "value: \"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "4.75 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: ]"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "3.5 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: ["></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "2.25 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: P"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "1 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: O"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-.25 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: I"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-1.5 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: U"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-2.75 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: Y"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-4 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: T"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-5.25 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: R"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-6.5 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: E"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-7.75 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: W"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-9 1 -1.25">
+        <a-entity mixin = "keyLet" text = "value: Q"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-10.5 1 -1.25" geometry = "width: 1.5">
+        <a-entity mixin = "keyLet" text = "value: TAB"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+
+      <!-- Keyboard Keys 4th Row -->
+      <a-entity mixin = "keyCap" position = "5.65 1 0" geometry = "width: 2.25">
+        <a-entity mixin = "keyLet" text = "value: ENTER"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "3.75 1 0">
+        <a-entity mixin = "keyLet" text = "value: '"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "2.5 1 0">
+        <a-entity mixin = "keyLet" text = "value: :"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "1.25 1 0">
+        <a-entity mixin = "keyLet" text = "value: L"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
       <a-entity mixin = "keyCap" position = "0 1 0">
         <a-entity mixin = "keyLet" text = "value: K"></a-entity>
-        <a-entity mixin = "keyLight"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
       </a-entity>
       <a-entity mixin = "keyCap" position = "-1.25 1 0">
         <a-entity mixin = "keyLet" text = "value: J"></a-entity>
-        <a-entity mixin = "keyLight"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
       </a-entity>
       <a-entity mixin = "keyCap" position = "-2.5 1 0">
         <a-entity mixin = "keyLet" text = "value: H"></a-entity>
-        <a-entity mixin = "keyLight"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-3.75 1 0">
+        <a-entity mixin = "keyLet" text = "value: G"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-5 1 0">
+        <a-entity mixin = "keyLet" text = "value: F"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-6.25 1 0">
+        <a-entity mixin = "keyLet" text = "value: D"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-7.5 1 0">
+        <a-entity mixin = "keyLet" text = "value: S"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-8.75 1 0">
+        <a-entity mixin = "keyLet" text = "value: A"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-10.4 1 0" geometry = "width: 1.75">
+        <a-entity mixin = "keyLet" text = "value: CAPS"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+
+      <!-- Keyboard Keys 5th Row -->
+      <a-entity mixin = "keyCap" position = "-10 1 1.25" geometry = "width: 2.5">
+        <a-entity mixin = "keyLet" text = "value: SHIFT"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-8 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: Z"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-6.75 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: X"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-5.5 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: C"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-4.25 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: V"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-3 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: B"></a-entity>
+        <a-entity mixin = "keyLight-6"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-1.75 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: N"></a-entity>
+        <a-entity mixin = "keyLight-7"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "-.5 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: M"></a-entity>
+        <a-entity mixin = "keyLight-1"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = ".75 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: <"></a-entity>
+        <a-entity mixin = "keyLight-2"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "2 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: >"></a-entity>
+        <a-entity mixin = "keyLight-3"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "3.25 1 1.25">
+        <a-entity mixin = "keyLet" text = "value: ?"></a-entity>
+        <a-entity mixin = "keyLight-4"></a-entity>
+      </a-entity>
+      <a-entity mixin = "keyCap" position = "5.4 1 1.25" geometry = "width: 2.75">
+        <a-entity mixin = "keyLet" text = "value: SHIFT"></a-entity>
+        <a-entity mixin = "keyLight-5"></a-entity>
       </a-entity>
     
 
       <a-entity light = "type: point; color: #fff; intensity: 5; distance: 100" position = "20 75 20"></a-entity>
-      <a-entity camera position = "0 0 2" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
+      <a-entity camera position = "0 10 2" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
       <a-sky material = "color: #fff"></a-sky>
     </a-scene>
   </body>
