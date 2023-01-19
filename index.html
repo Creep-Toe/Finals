@@ -122,22 +122,29 @@
       <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 -5.5" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
       <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 3.75" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
 
-<!-- Monitor <a-entity light = "type: point; color: #fff; intensity: 5; distance: 100" position = "20 75 20"></a-entity> -->
-      <a-entity geometry = "primitive: box; depth: .5; height: 20; width: 35" position = "4 15 -15" material = "shader: flat; color: white; src: url(videos/NGGYU.mp4); autopplay: true" light = "type: point; color: white; intensity: 2; distance: 40"></a-entity></a-entity>
+   <!-- Mouse -->
+   	  <a-model src = "models/mouse.dae" scale = "3 3 3" position = "0 0.35 2.5" rotation = "0 90 0" loader = "format:collada; src:url(models/mouse.dae)" material = "color: #FFF"></a-model>
+
+<!-- Monitor -->
+      <a-entity geometry = "primitive: box; depth: .5; height: 20; width: 35" position = "4 15 -15" material = "shader: flat; color: white; src: url(videos/NGGYU.mp4); autopplay: true" light = "type: point; color: white; intensity: 2; distance: 40"></a-entity>
+  	  <a-entity geometry = "primitive: box; depth: .25; height: 20; width: 35" position = "4 15 -15.25" material = "shader: flat; color: black; roughness: 1"></a-entity>
   <!-- Border -->
       <a-assets>
         <a-mixin
-          id = "border"
-          material = "color: black; shader: flat; roughness: 1"
+          id = "monitor-stuff"
+          material = "color: #111; shader: flat; roughness: 1"
           geometry = "primitive: box; height: 1; width: 1; depth: 1"></a-mixin>
       </a-assets>
-      <a-entity mixin = "border" position = "4 4.5 -15" geometry = "width: 37"></a-entity>
-      <a-entity mixin = "border" position = "4 25.5 -15" geometry = "width: 37"></a-entity>
-      <a-entity mixin = "border" position = "22 15 -15" geometry = "height: 22"></a-entity>
-      <a-entity mixin = "border" position = "-14 15 -15" geometry = "height: 22"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "4 4.5 -15" geometry = "width: 37"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "4 25.5 -15" geometry = "width: 37"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "22 15 -15" geometry = "height: 22"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "-14 15 -15" geometry = "height: 22"></a-entity>
+      <!-- Stand -->
+      <a-entity mixin = "monitor-stuff" position = "4 0 -18" rotation = "17.5 0 0" geometry = "height: 17.5; width: 2"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "4 0 -15" geometry = "height: 1.5; width: 20; depth: 7.5" material = "shader: standard; color: black"></a-entity>
     
       
-      <a-entity camera position = "7.5 12 15" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
+      <a-entity camera position = "7.5 12 0" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
       <a-entity geometry = "primitive: box; depth: 1; height: 30; width: 70" position = "12.5 0 -7.5" rotation = "-90 0 0" material = "shader: standard; src: url(images/wood.jpg); color: #5e2c04"></a-entity>
       <a-sky material = "color: #333"></a-sky>
     </a-scene>
