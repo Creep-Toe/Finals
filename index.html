@@ -123,28 +123,60 @@
       <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 3.75" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
 
    <!-- Mouse -->
-   	  <a-model src = "models/mouse.dae" scale = "3 3 3" position = "0 2 2.5" rotation = "0 0 0" loader = "format:collada; src:url(models/mouse.dae)" material = "color: #FFF"></a-model>
+      <a-model src = "models/mouse.dae" scale = "3 3 3" position = "0 2 2.5" rotation = "0 0 0" loader = "format:collada; src:url(models/mouse.dae)" material = "color: #FFF"></a-model>
+
 
 <!-- Monitor -->
       <a-entity geometry = "primitive: box; depth: .5; height: 20; width: 35" position = "4 15 -15" material = "shader: flat; color: white; src: url(videos/NGGYU.mp4); autopplay: true" light = "type: point; color: white; intensity: 2; distance: 40"></a-entity>
-  	  <a-entity geometry = "primitive: box; depth: .25; height: 20; width: 35" position = "4 15 -15.25" material = "shader: flat; color: black; roughness: 1"></a-entity>
+      <a-entity geometry = "primitive: box; depth: .25; height: 20; width: 35" position = "4 15 -15.25" material = "shader: flat; color: black; roughness: 1"></a-entity>
   <!-- Border -->
       <a-assets>
         <a-mixin
           id = "monitor-stuff"
           material = "color: #111; shader: flat; roughness: 1"
-          geometry = "primitive: box; height: 1; width: 1; depth: 1"></a-mixin>
+          geometry = "primitive: box; height: .5; width: .5; depth: 1"></a-mixin>
       </a-assets>
-      <a-entity mixin = "monitor-stuff" position = "4 4.5 -15" geometry = "width: 37"></a-entity>
-      <a-entity mixin = "monitor-stuff" position = "4 25.5 -15" geometry = "width: 37"></a-entity>
-      <a-entity mixin = "monitor-stuff" position = "22 15 -15" geometry = "height: 22"></a-entity>
-      <a-entity mixin = "monitor-stuff" position = "-14 15 -15" geometry = "height: 22"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "4 4.5 -15" geometry = "width: 36.5"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "4 25.5 -15" geometry = "width: 36.5"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "22 15 -15" geometry = "height: 21.5"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "-14 15 -15" geometry = "height: 21.5"></a-entity>
       <!-- Stand -->
-      <a-entity mixin = "monitor-stuff" position = "4 0 -18" rotation = "17.5 0 0" geometry = "height: 17.5; width: 2"></a-entity>
+      <a-entity mixin = "monitor-stuff" position = "4 0 -18" rotation = "17.5 0 0" geometry = "height: 12.5; width: 2"></a-entity>
       <a-entity mixin = "monitor-stuff" position = "4 0 -15" geometry = "height: 1.5; width: 20; depth: 7.5" material = "shader: standard; color: black"></a-entity>
+
+
+<!-- System Unit -->
+      <a-assets>
+        <a-mixin id = "sysBorder" geometry = "primitive: box" material = "shader: standard; color: white">
+        </a-mixin>
+      </a-assets>
     
+      <a-entity position = "35 1.5 -6">
+        <a-entity mixin = "sysBorder" geometry = "height: .5; depth: 20; width: 15"></a-entity>
+        <a-entity mixin = "sysBorder" position = "0 17.5 0" geometry = "height: .5; depth: 20; width: 15"></a-entity>
+        <a-entity mixin = "sysBorder" position = "0 9 -9.75" geometry = "height: 17.5; depth: .5; width: 15"></a-entity>
+        <a-entity mixin = "sysBorder" position = "5.5 9 0" geometry = "height: 17.5; depth: 20; width: 4"></a-entity>
+      </a-entity>
+
+  <!-- Fan -->  
+      <a-assets>
+        <a-mixin id = "sysFan" animation = "property: rotation; to: 0 0 -360; dur: 200; easing: linear; loop: true"></a-mixin>
+        <a-mixin id = "fanShaft" geometry = "primitive: box; height: .15; width: 1; depth: .05" material = "shader: flat"></a-mixin>
+        <a-mixin id = "fanLight" light = "type: point; intensity: 1; distance: 10"></a-mixin>
+      </a-assets>
+
+      <a-entity position = "32 14.5 -15" scale = "2.5 2.5 2.5">
+        <a-entity mixin="sysFan"><a-entity mixin="fanShaft" animation="property: material.color; from:  #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true" position=".75 0 0"></a-entity><a-entity mixin="fanLight" animation="property: light.color; from: #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true" position="1 0 0"></a-entity></a-entity><a-entity mixin="sysFan"><a-entity mixin="fanShaft" animation="property: material.color; from:  #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true" position="-.75 0 0"></a-entity><a-entity mixin="fanLight" animation="property: light.color; from: #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true" position="-1 0 0"></a-entity></a-entity>
+      </a-entity>
+      <a-entity position = "37 14.5 .5" scale = "2.5 2.5 2.5" rotation = "0 90 0">
+        <a-entity mixin="sysFan"><a-entity mixin="fanShaft" animation="property: material.color; from:  #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true" position=".75 0 0"></a-entity><a-entity mixin="fanLight" animation="property: light.color; from: #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true" position="1 0 0"></a-entity></a-entity><a-entity mixin="sysFan"><a-entity mixin="fanShaft" animation="property: material.color; from:  #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true" position="-.75 0 0"></a-entity><a-entity mixin="fanLight" animation="property: light.color; from: #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true" position="-1 0 0"></a-entity></a-entity>
+      </a-entity>
+      <a-entity position = "37 6 .5" scale = "2.5 2.5 2.5" rotation = "0 90 0">
+        <a-entity mixin="sysFan"><a-entity mixin="fanShaft" animation="property: material.color; from:  #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true" position=".75 0 0"></a-entity><a-entity mixin="fanLight" animation="property: light.color; from: #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true" position="1 0 0"></a-entity></a-entity><a-entity mixin="sysFan"><a-entity mixin="fanShaft" animation="property: material.color; from:  #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true" position="-.75 0 0"></a-entity><a-entity mixin="fanLight" animation="property: light.color; from: #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true" position="-1 0 0"></a-entity></a-entity>
+      </a-entity>
+
       
-      <a-entity camera position = "7.5 12 0" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
+      <a-entity camera position = "7.5 10 0" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
       <a-entity geometry = "primitive: box; depth: 1; height: 30; width: 70" position = "12.5 0 -7.5" rotation = "-90 0 0" material = "shader: standard; src: url(images/wood.jpg); color: #5e2c04"></a-entity>
       <a-sky material = "color: #333"></a-sky>
     </a-scene>
