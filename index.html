@@ -384,7 +384,12 @@
          <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 -5.5" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
          <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 3.75" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
          <!-- Mouse -->
-         <a-model src = "models/mouse.dae" scale = "3 3 3" position = "0 2 2.5" rotation = "0 0 0" loader = "format:collada; src: url(models/mouse.dae)" material = "color: #FFF; src: url(models/mouse.dae)"></a-model>
+         <a-entity geometry = "primitive: box; depth: 4.5; height: 1.5; width: 3" position = "17.5 1 0" material = "color: #111; shader: standard"></a-entity>
+         <a-entity geometry = "primitive: box; depth: 4.75; height: 1; width: 3.5" position = "17.5 1 0" material = "color: #111; shader: standard"></a-entity>
+         <a-entity geometry = "primitive: box; depth: 4.85; height: .1; width: 3.6" position = "17.5 1 0" material = "color: #fff; shader: flat"></a-entity>
+
+         <a-entity geometry = "primitive: box; depth: 1.95; height: .1; width: 1.25" position = "16.75 1.75 -1.3" material = "color: black; shader: flat"></a-entity>
+         <a-entity geometry = "primitive: box; depth: 1.95; height: .1; width: 1.25" position = "18.25 1.75 -1.3" material = "color: black; shader: flat"></a-entity>
          <!-- Monitor -->
          <a-entity geometry = "primitive: box; depth: .5; height: 21; width: 35" position = "4 14.75 -15" material = "shader: flat; color: white; src: url(videos/NGGYU.mp4); autopplay: true" light = "type: point; color: white; intensity: 2; distance: 40"></a-entity>
          <a-entity geometry = "primitive: box; depth: .25; height: 21; width: 35" position = "4 14.75 -15.25" material = "shader: flat; color: black; roughness: 1"></a-entity>
