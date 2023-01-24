@@ -10,6 +10,28 @@
    </head>
    <body>
       <a-scene>
+         <!-- Table -->
+         <a-asset>
+           <a-mixin id = "stand" geometry = "primitive: cylinder; height: 40; radius: 1" material = "shader: standard; color: brown" position = "12.5 0 -7.5"></a-mixin>
+         </a-asset>
+         <a-entity mixin = "stand" position = "45 -20 5"></a-entity>
+         <a-entity mixin = "stand" position = "-20 -20 5"></a-entity>
+         <a-entity mixin = "stand" position = "45 -20 -20"></a-entity>
+         <a-entity mixin = "stand" position = "-20 -20 -20"></a-entity>
+         <a-entity geometry = "primitive: box; depth: 1; height: 30; width: 70" position = "12.5 0 -7.5" rotation = "-90 0 0" material = "shader: standard; src: url(images/wood.jpg); color: #5e2c04"></a-entity>
+
+         <!-- Room -->
+
+         <a-asset>
+           <a-mixin id = "room" geometry = "primitive: box; height: 300; width: 300; depth: 1" material = "shader: flat; color: black" rotation = "-90 0 0"></a-mixin>
+         </a-asset>
+         <a-entity mixin = "room" position = "12.5 -20 107.5" src = "images/floor.jpg"></a-entity>
+         <a-entity mixin = "room" position = "12.5 120 107.5" src = "images/space.jpg"></a-entity>
+         <a-entity mixin = "room" position = "12.5 -20 -42.5" rotation = "0 0 0" material = "shader: flat; color: #d1d0d7"></a-entity>
+         <a-entity mixin = "room" position = "12.5 -20 257.5" rotation = "0 0 0" material = "shader: flat; color: #d1d0d7"></a-entity>
+         <a-entity mixin = "room" position = "157.5 -20 107.5" rotation = "0 -90 0" src = "images/wall1.jpg"></a-entity>
+         <a-entity mixin = "room" position = "-132.5 -20 107.5" rotation = "0 -90 0" src = "images/wall2.jpg"></a-entity>
+
          <!-- Mousepad -->
          <a-entity geometry = "primitive: box; depth: .1; height: 15; width: 42.5" position = "3.5 .475 -1" rotation = "-90 0 0" material = "shader: standard; src: url(images/mousepad.jpg); color: #94735c"></a-entity>
          <!-- Keyboard -->
@@ -479,8 +501,8 @@
          </a-entity>
 
          <a-entity camera position = "10 10 20" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
-         <a-entity geometry = "primitive: box; depth: 1; height: 30; width: 70" position = "12.5 0 -7.5" rotation = "-90 0 0" material = "shader: standard; src: url(images/wood.jpg); color: #5e2c04"></a-entity>
-         <a-sky src = "images/gamerBG1.jpg"></a-sky>
+         
+         <a-sky material = "color: #333"></a-sky>
       </a-scene>
    </body>
 </html>
