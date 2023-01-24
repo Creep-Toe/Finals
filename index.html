@@ -24,15 +24,15 @@
          <!-- Room -->
 
          <a-asset>
-           <a-mixin id = "room" geometry = "primitive: box; height: 200; width: 200; depth: .1" material = "shader: flat"></a-mixin>
+           <a-mixin id = "room" geometry = "primitive: box; height: 200; width: 200; depth: .1" material = "shader: standard"></a-mixin>
          </a-asset>
          <a-entity mixin = "room" position = "12.5 -30 52.5" rotation = "-90 0 0" material = "src: url(images/floor.jpg)"></a-entity>
          <a-entity mixin = "room" position = "12.5 110 60" rotation = "-90 0 0" material = "src: url(images/space.png)"></a-entity>
          <a-entity mixin = "room" position = "12.5 20 -22.5" rotation = "-90 0 0" material = "color: #d1d0d7"></a-entity>
          <a-entity mixin = "room" position = "12.5 20 152.5" rotation = "-90 0 0" material = "color: #d1d0d7"></a-entity>
 
-         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "107.5 20 70" rotation = "0 -90 0" material = "shader: flat; src: url(images/wall1.jpg)"></a-entity>
-         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "-82.5 20 70" rotation = "0 -90 0" material = "shader: flat; src: url(images/wall2.jpg)"></a-entity>
+         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "107.5 20 70" rotation = "0 -90 0" material = "shader: standard; src: url(images/wall1.jpg); color: #fff"></a-entity>
+         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "-82.5 20 70" rotation = "0 -90 0" material = "shader: standard; src: url(images/wall2.jpg); color: #fff"></a-entity>
          <!-- Mousepad -->
          <a-entity geometry = "primitive: box; depth: .1; height: 15; width: 42.5" position = "3.5 .475 -1" rotation = "-90 0 0" material = "shader: standard; src: url(images/mousepad.jpg); color: #94735c"></a-entity>
          <!-- Keyboard -->
