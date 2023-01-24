@@ -11,7 +11,7 @@
    <body>
       <a-scene>
          <a-entity camera position = "10 10 20" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
-         <!-- Table -->
+      <!-- Table -->
          <a-asset>
            <a-mixin id = "stand" geometry = "primitive: cylinder; height: 40; radius: 1" material = "shader: standard; color: brown" position = "12.5 0 -7.5"></a-mixin>
          </a-asset>
@@ -21,7 +21,7 @@
          <a-entity mixin = "stand" position = "-20 -20 -20"></a-entity>
          <a-entity geometry = "primitive: box; depth: 1; height: 30; width: 70" position = "12.5 0 -7.5" rotation = "-90 0 0" material = "shader: standard; src: url(images/wood.jpg); color: #5e2c04"></a-entity>
 
-         <!-- Room -->
+      <!-- Room -->
          <!-- Wall -->
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "62.5 -30 72" rotation = "-90 0 0" material = "shader: flat; src: url(images/floor.jpg); color: #fff"></a-entity>
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "62.5 100 72" rotation = "270 0 0" material = "shader: flat; src: url(images/spaceBG.jpg); color: #fff"></a-entity>
@@ -31,14 +31,13 @@
 
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "-37.5 20 72" rotation = "0 -90 0" material = "shader: flat; color: #d1d0d7"></a-entity>
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "162.5 20 72" rotation = "0 -90 0" material = "shader: flat; color: #d1d0d7"></a-entity>
-         <!-- Window <a-entity geometry = "primitive: box; height: 1; width: 2; depth: .001" scale = "60 60 60" position = "160 40 72" rotation = "0 90 0" material = "color: #111; shader: flat;"></a-entity> -->
-         <a-model src = "models/window.dae" scale = "1 1 1" position = "160 40 72" rotation = "0 90 0" loader = "format: collada; src: url(models/window.dae)" material = "color: #111; shader: flat;"></a-model>
-
          
+         <!-- Window <a-model src = "models/window.dae" scale = "1 1 1" position = "160 40 72" rotation = "0 90 0" loader = "format: collada; src: url(models/window.dae)" material = "color: #111; shader: flat;"></a-model> -->
+         <a-entity geometry = "primitive: box; height: 1; width: 2; depth: .001" scale = "60 60 60" position = "160 40 72" rotation = "0 90 0" material = "color: #111; shader: flat;"></a-entity>
          
-         <!-- Mousepad -->
+      <!-- Mousepad -->
          <a-entity geometry = "primitive: box; depth: .1; height: 15; width: 42.5" position = "3.5 .475 -1" rotation = "-90 0 0" material = "shader: standard; src: url(images/mousepad.jpg); color: #94735c"></a-entity>
-         <!-- Keyboard -->
+      <!-- Keyboard -->
          <a-assets>
             <a-mixin id = "keyCap" material = "color: #111; shader: standard; roughness: 1" geometry = "primitive: box; height: 0.5; width: 1; depth: 1"></a-mixin>
             <a-mixin id = "keyLet" position = "0 0.25 0" rotation = "-90 0 0" text = "align: center; width: 10; color: white"></a-mixin>
@@ -409,14 +408,14 @@
          <a-entity geometry = "primitive: box; depth: .5; height: 10; width: .75" position = "11.5 .75 -.875" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
          <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 -5.5" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
          <a-entity geometry = "primitive: box; depth: .5; height: .75; width: 24.25" position = "-.25 .75 3.75" rotation = "-90 0 0" material = "shader: standard; color: black; roughness: 2"></a-entity>
-         <!-- Mouse -->
+      <!-- Mouse -->
          <a-entity geometry = "primitive: box; depth: 4.5; height: 1.5; width: 3" position = "17.5 1 0" material = "color: #111; shader: standard"></a-entity>
          <a-entity geometry = "primitive: box; depth: 4.75; height: 1; width: 3.5" position = "17.5 1 0" material = "color: #111; shader: standard"></a-entity>
          <a-entity geometry = "primitive: box; depth: 4.85; height: .1; width: 3.6" position = "17.5 1 0" material = "color: #fff; shader: flat"></a-entity>
 
          <a-entity geometry = "primitive: box; depth: 1.95; height: .1; width: 1.25" position = "16.75 1.75 -1.3" material = "color: black; shader: flat"></a-entity>
          <a-entity geometry = "primitive: box; depth: 1.95; height: .1; width: 1.25" position = "18.25 1.75 -1.3" material = "color: black; shader: flat"></a-entity>
-         <!-- Monitor -->
+      <!-- Monitor -->
          <a-entity geometry = "primitive: box; depth: .5; height: 21; width: 35" position = "4 14.75 -15" material = "shader: flat; color: white; src: url(videos/NGGYU.mp4); autopplay: false" light = "type: point; color: white; intensity: 2; distance: 40"></a-entity>
          <a-entity geometry = "primitive: box; depth: .25; height: 21; width: 35" position = "4 14.75 -15.25" material = "shader: flat; color: black; roughness: 1"></a-entity>
          <!-- Border -->
@@ -433,7 +432,7 @@
          <!-- Stand -->
          <a-entity mixin = "monitor-stuff" position = "4 2.5 -16" rotation = "17.5 0 0" geometry = "height: 5; width: 2"></a-entity>
          <a-entity mixin = "monitor-stuff" position = "4 0 -15" geometry = "height: 1.5; width: 20; depth: 7.5" material = "shader: standard; color: black"></a-entity>
-         <!-- System Unit -->
+      <!-- System Unit -->
          <a-assets>
             <a-mixin id = "cpu" geometry = "primitive: box" material = "shader: standard; color: white; roughness: 2">
             </a-mixin>
@@ -443,7 +442,6 @@
             <a-entity mixin = "cpu" position = "0 17.5 0" geometry = "height: .5; depth: 20; width: 15"></a-entity>
             <a-entity mixin = "cpu" position = "0 9 -9.75" geometry = "height: 17.5; depth: .5; width: 15"></a-entity>
             <a-entity mixin = "cpu" position = "5.5 9 0" geometry = "height: 17.5; depth: 20; width: 4"></a-entity>
-
             <a-entity mixin = "cpu" position = "3 8.5 -3.75" geometry = "height: 14; depth: 11; width: 1" material = "color: #333"></a-entity>
             <a-entity mixin = "cpu" position = "2 11.5 -5" geometry = "height: 4; depth: 4; width: 1.75" material = "color: black"></a-entity>
             <a-entity mixin = "cpu" position = "-.5 5.5 -3.5" geometry = "height: 2; depth: 12; width: 6" material = "metalness: 2"></a-entity>
@@ -453,7 +451,6 @@
             <a-entity mixin = "cpu" position = "2 11.5 -1" geometry = "height: 6; depth: .25; width: 1.75" material = "shader: flat" animation="property: material.color; from:  #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true"></a-entity>
             <a-entity mixin = "cpu" position = "2 11.5 -.5" geometry = "height: 6; depth: .25; width: 1.75" material = "shader: flat" animation="property: material.color; from:  #FF0000; to: #008000; direction: alternate; dur: 1000; loop: true"></a-entity>
             <a-entity mixin = "cpu" position = "2 11.5 0" geometry = "height: 6; depth: .25; width: 1.75" material = "shader: flat" animation="property: material.color; from:  #FFFF00; to:  #800080; direction: alternate; dur: 1000; loop: true"></a-entity>
-
             <a-entity mixin = "cpu" position = "4.5 8.75 10.1" geometry = "height: 18; depth: .1; width: .1" material = "shader: flat"></a-entity>
          </a-entity>
 
