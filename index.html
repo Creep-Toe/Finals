@@ -10,7 +10,7 @@
    </head>
    <body>
       <a-scene>
-         <a-entity camera position = "10 10 100" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
+         <a-entity camera position = "10 10 -20" look-controls = "enabled: true" cursor-visible = "enabled: false" wasd-controls = "enabled: true"></a-entity>
          <!-- Table -->
          <a-asset>
            <a-mixin id = "stand" geometry = "primitive: cylinder; height: 40; radius: 1" material = "shader: standard; color: brown" position = "12.5 0 -7.5"></a-mixin>
@@ -29,8 +29,8 @@
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "12.5 -30 52.5" rotation = "-90 0 0" material = "shader: flat; src: url(images/floor.jpg); color: #fff"></a-entity>
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "12.5 110 52.5" rotation = "-90 0 0" material = "shader: flat; src: url(images/space.png); color: #fff"></a-entity>
 
-         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "107.5 20 62.5" rotation = "0 -90 0" material = "shader: flat; src: url(images/wall1.jpg)"></a-entity>
-         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "-82.5 20 62.5" rotation = "0 -90 0" material = "shader: flat; src: url(images/wall2.jpg)></a-entity>
+         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "107.5 20 70" rotation = "0 -90 0" material = "shader: flat; src: url(images/wall1.jpg)"></a-entity>
+         <a-entity geometry = "primitive: box; height: 185; width: 185; depth: .1" position = "-82.5 20 70" rotation = "0 -90 0" material = "shader: flat; src: url(images/wall2.jpg)"></a-entity>
 
          <a-entity mixin = "room" position = "12.5 20 -22.5" rotation = "0 0 0" material = "shader: flat; color: #d1d0d7"></a-entity>
          <a-entity mixin = "room" position = "12.5 20 152.5" rotation = "0 0 0" material = "shader: flat; color: #d1d0d7"></a-entity>
