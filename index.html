@@ -22,6 +22,7 @@
          <a-entity geometry = "primitive: box; depth: 1; height: 30; width: 70" position = "12.5 0 -7.5" rotation = "-90 0 0" material = "shader: standard; src: url(images/wood.jpg); color: #5e2c04"></a-entity>
 
          <!-- Room -->
+         <!-- Wall -->
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "62.5 -30 72" rotation = "-90 0 0" material = "shader: flat; src: url(images/floor.jpg); color: #fff"></a-entity>
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "62.5 100 72" rotation = "270 0 0" material = "shader: flat; src: url(images/spaceBG.jpg); color: #fff"></a-entity>
          
@@ -30,7 +31,10 @@
 
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "-37.5 20 72" rotation = "0 -90 0" material = "shader: flat; color: #d1d0d7"></a-entity>
          <a-entity geometry = "primitive: box; height: 200; width: 200; depth: .1" position = "162.5 20 72" rotation = "0 -90 0" material = "shader: flat; color: #d1d0d7"></a-entity>
+         <!-- Window <a-entity geometry = "primitive: box; height: 1; width: 2; depth: .001" scale = "60 60 60" position = "160 40 72" rotation = "0 90 0" material = "color: #111; shader: flat;"></a-entity> -->
+         <a-model src = "models/window.dae" scale = "1 1 1" position = "160 40 72" rotation = "0 90 0" loader = "format: collada; src: url(models/window.dae)" material = "color: #111; shader: flat;"></a-model>
 
+         
          
          <!-- Mousepad -->
          <a-entity geometry = "primitive: box; depth: .1; height: 15; width: 42.5" position = "3.5 .475 -1" rotation = "-90 0 0" material = "shader: standard; src: url(images/mousepad.jpg); color: #94735c"></a-entity>
